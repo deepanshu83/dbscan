@@ -1,0 +1,18 @@
+experiment,eps,min_samples,n_clusters,note,time_ms,ari_vs_gold,nmi_vs_gold,forget_idx,n_affected
+1_baseline,0.6,5,3.0,original model M,,,,,
+2_hyperparam_sweep,0.4,5,3.0,"just re-running DBSCAN, NOT unlearning",,,,,
+2_hyperparam_sweep,0.8,5,3.0,"just re-running DBSCAN, NOT unlearning",,,,,
+2_hyperparam_sweep,0.6,3,3.0,"just re-running DBSCAN, NOT unlearning",,,,,
+2_hyperparam_sweep,0.6,8,3.0,"just re-running DBSCAN, NOT unlearning",,,,,
+3_gold_retrain,0.6,5,3.0,"brute-force retrain on D_R, this is the benchmark M_G",1.3358592987060547,,,,
+4_unlearning,0.6,5,3.0,"local unlearning algorithm U, compared against M_G",1.4827251434326172,1.0,1.0,,
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,30.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,76.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,5.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,117.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,14.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,96.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,97.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,13.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,101.0,0.0
+5_robustness,0.6,5,,repeated unlearning test,,1.0,,4.0,0.0
